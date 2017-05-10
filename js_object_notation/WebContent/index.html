@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script type="text/javascript">
+		
+		var oDate = new Date();
+		var sDate = oDate.getDate();
+		var sMonth = oDate.getMonth();
+		
+		console.log(sDate);
+		console.log("Current Month " + (1 + sMonth));
+		
+		var oObject = {
+			Characteristic1 : "Value1",
+			Characteristic2 : "Value2",
+				outputCharacteristic2 : function(){	
+					alert("Characteristic2 is " + this.Characteristic2);
+				}
+			}
+		
+		oObject.outputCharacteristic2();
+		
+		</script>
+
+	</head>
+	
+	<body>
+	
+	
+	</body>
+</html>

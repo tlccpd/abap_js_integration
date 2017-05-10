@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+		/* function button(){
+			// Call function 
+		 		alert("Button pressed");
+			}; */
+		function loaded(){
+				alert("Page loaded");
+				console.log("Page loaded");
+			};
+		function button(){
+				// Call function
+				var output = multiply(5,5);
+				//Output
+				alert(output);
+		}
+		
+		//Multiply function
+		function multiply(a,b)
+		{
+			var y = a * b;
+			return y ;
+		}
+		/* Two entries are generatedin the console */
+			console.log("First entry");
+			console.log("Second entry");
+	</script>
+</head>
+<body onload = "loaded()">
+	<button type = "button" onclick = "button()">
+		Call Function
+	</button>
+</body>
+</html>

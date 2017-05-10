@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+		<script type="text/javascript">
+		
+		var iVar = 10;
+		var sVar = "10";
+		
+		var result  = iVar + parseInt(sVar);
+		
+		alert(result);
+		
+		
+		function display()
+		{
+			var oName = document.getElementById("day");
+	//		alert(oName.value);
+		}
+		
+		var ivar = parseInt("XX");
+		var sBool = isNaN(ivar);
+//		alert(sBool);
+		
+		var firstname = "Linda";
+		var lastname  = "Walker";
+		
+		var name = firstname.concat(lastname);
+		
+		//or
+		
+	//	alert(name);
+		
+		var Name = "Linda" + "Walker";
+		
+	//	alert(Name);
+	
+	/* 			Relational Operators		*/
+	
+	/* 	== 		Equal to
+	 	=== 	Strictly equal to
+	 	!-		Not Equal to
+	 	!--  	Strictly not equal to
+	 	>		Greater than
+	 	<		Less than
+	 	>=		Greater than or equal to
+	 	<=		Less than or equal to
+	*/
+	
+	/* Differencies between equal to operator and strictly equal to operator */
+	alert("1" == 1);		//true
+	alert("1" === 1);		//false
+	
+	/* typeof operator
+	
+	You can use typeof to determine the type fo variable. You will obtain one
+		of the following values 
+		
+		*undefined
+		*boolean
+		*function
+		*number
+		*object
+		*string
+	
+	The typeof operator is particularly suited for checking whether a variable
+	is defined at all due to its undefined return value
+	
+	*/
+	
+// 	var key = "Halil";
+	
+// // 	switch (key) {
+// // 	case "Halil":
+// // 		alert(key);
+// // 		break;
+// // 	default:
+// // 		alert("Default");
+// // 		break;
+// // 	}
+
+// 		for (i = 0; i < 10; i++){
+// 			// Loop body
+// 			console.log(i);
+// 			};
+
+		
+
+
+		</script>
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+		<script>
+			
+				
+				
+		</script>
+
+	</head>
+	<body >
+		<form >
+		Tag : <input type = "month" name = "day" id = "day">
+		<button type = button onclick="display()">
+		Send
+		</button>
+		</form>
+		<!-- <div id="content"></div>  -->
+	</body>
+</html>

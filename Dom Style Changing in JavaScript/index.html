@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<script type="text/javascript">
+	
+	function init(){
+		set(-600);
+		animate();
+	}
+	
+	function animate(){
+		
+		if(get()>0)
+			set(0);
+		if(get()<0){
+			set(get()+3);
+			setTimeout("animate()",30);
+		}
+	}
+	
+	function get(){
+		return parseInt(
+			document.getElementById("logo").style.left);
+	}
+	function set(n){
+		document.getElementById("logo").style.left = n + "px";
+	}
+		
+	</script>
+	</head>
+	<body onload="init()">
+		<div STYLE = "position:relative" ID ="logo">
+			<img src="HTML5_sticker.png">		
+		</div>
+	</body>
+</html>

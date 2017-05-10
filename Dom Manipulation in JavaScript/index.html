@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<script type="text/javascript">
+		function display(){
+			var oName = document.getElementById("day");
+			var oOutput = document.getElementById("output");
+			
+			switch (oName.value) {
+				case "Monday":
+					oOutput.innerHTML ="Garfield says: I hate Mondays!";
+					break;
+				case "Tuesday":
+					oOutput.innerHTML="At least it's not Monday";
+					break;
+				case "Wednesday":
+					oOutput.innerHTML="Better known as hump day";
+					break;
+				case "Thursday":
+					oOutput.innerHTML="Almost Friday";
+					break;
+				case "Friday":
+					oOutput.innerHTML="It is Friday";
+					break;
+				default:
+					oOutput.style.color = "red";
+					oOutput.style.backgroundColor = "yellow";
+					oOutput.innerHTML="Weekend...!";
+				};};
+				</script>
+	</head>
+	<body>
+		<form>Tag: <input type="day" name="day" id="day">
+		<button type="button" onclick="display()">Submit</button>
+		</form>
+		<p>	What is there on this day to say?
+			<div id="output"></div>
+		</p>
+	</body>
+</html>

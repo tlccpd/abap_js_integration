@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<!-- <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/> -->
+		
+		<script type="text/javascript">
+		
+		function load(){
+			var oContent = document.getElementById("content");
+			var sOutput = " ";
+				for( var i = 1; i<10 ;i++){
+					
+				sOutput = sOutput + i + "<br>" ;
+				
+					}
+				
+			oContent.innerHTML = sOutput ;
+			oContent.innerHTML += "Players. And the coach?";
+			
+		}
+		
+		</script>
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+	</head>
+	<body onload="load()">
+		<p> A baseball team consists of...</p>
+		<div id = "content">
+		<!-- Output from Javascript -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		
+		<script>
+		
+		function get()
+		{
+			var oArray = new Array();
+			
+			oArray[0] = "First Entry";
+			oArray[1] = "Second Entry";
+			oArray[3	] = "Third Entry";
+			
+			oContent.innerHTML = sOutput ;
+			
+			/*
+			
+			**Property**		**Description**
+			firstChild			First child node
+			childNodes[]		Child node [array]
+			lastChild			Last child node
+			nextSibling			Next node at the same level
+			previousSibling		Previous node at the same level
+			parentNode			Parent node
+			
+			*/
+		};
+		
+		</script>
+	</head>
+	
+	<body>
+		<form>
+			<label for = "sport">Object</label>
+	 		<select name = "sport" id = "sport" size="1">
+				<option value = "BaseBall">Baseball</option>
+				<option value = "Icehockey">Hockey</option>
+			</select> 
+			<button type="button" onclick="get()">Submit</button>	
+			<br>
+		</form>
+		<div id = "content">
+		<!-- Output from javascript -->
+		</div>
+	</body>
+</html>

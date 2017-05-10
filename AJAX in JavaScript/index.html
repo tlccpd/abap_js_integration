@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Ajax Example</title>
+	<script type="text/javascript"
+			src="jquery.js">
+	</script>
+	<script type="text/javascript">
+		
+	var oRequest = new XMLHttpRequest();
+	
+	var sUsername = "HALILU";
+	var sPassword = "123456";
+	var sUrl ;
+	
+//  AJAX opens a connection to server for pushing data from sap databases */
+ 
+	oRequest.open("GET", sUrl , true , sUsername, sPassword) ;
+	
+	oRequest.onreadystatechange = function(){
+		if(oRequest.readyState == 4){
+			
+		}
+	};
+	
+// You can do ajax request by jquery , it is facilited request withing jQuery .
+
+/* 	$.AJAX({
+ 		url : "http://<server>:<port>/path/"
+ 		success : function(result){
+			// Implementation
+ 		}
+ 	});
+
+ $.get("http://<server>:<port>/path/", function(result)  {
+	 		//Implementation
+	 }
+ });
+
+ */
+	
+// You should only choose false for synchronous  processing . It is used to case with forms.
+
+//	oRequest.readyState is used to determine whether the request has been processed by the server and
+//  returned to the browser.
+
+/*	readyState			Explanation
+ 	0					Not initialized
+ 	1					Initialized
+ 	2					Contacted
+ 	3					Data stream from the backend is loaded
+ 	4					Completed
+ */
+ 
+ // oRequest.send();
+ // You then use the send() method to send the data to the server.
+ 
+ // In the final step  ,you can process the received data . Two attributes are crucial. 
+ // The http status code and the actual response.
+ 
+ // HTTP Status code
+ 
+ /*
+ 	Based on the first digit , you can see which category is involved.
+ 	
+ 	1XX: Information
+ 	2XX: Successful request
+ 	3XX: Redirecting
+ 	4XX: Client-side error
+ 	5XX: Server-side error
+ 
+ */
+ 
+ /*
+ 
+ Data Type														Attribute
+ Text data														responseText
+ HTML 															responseText
+ JavaScript														responseText
+ JSON															responseText
+ JSONP 
+ (JSONP means “JSON with Padding” and 							responseText
+	rep-resents an enhancement for the JSON format)				
+XMLresponse														XML
+
+ */
+ 
+	</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

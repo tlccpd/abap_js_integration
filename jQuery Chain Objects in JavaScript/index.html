@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Animation</title>
+	<style>
+		p {
+			width			: 100px;
+			border			: 1px solid black;
+		  }
+	</style>
+	<script type="text/javascript"
+			src="jquery.js">
+	</script>
+	<script type="text/javascript">
+	/* This ready function is executed when the page was loaded by web browser,
+		so that function isnt being working earlier page document.
+		It is ensures by jquery because of jquery api.
+		
+		jquery factory function == $()
+	*/
+	$(document).ready(function() {
+		
+		$('p').animate({
+			width       : "60%",
+			opacity     : 0.4,
+			marginLeft  : "0.6in",
+			fontSize    : "3em",
+			borderWidth : "10px"
+		}, 3000).fadeOut(1000).fadeIn(100);	
+	});
+	</script>
+	</head>
+	<body>
+		<p>First paragraph</p>
+		<p>Second paragraph</p>
+	</body>
+</html>

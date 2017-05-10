@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<script type="text/javascript">
+	
+	function display()
+	{
+		var oName = document.getElementById("day");
+		var oOutput = document.getElementById("output");
+		
+		oOutput.addEventListener(
+				'mouseover',
+				highlight,
+				false);
+		
+		oOutput.addEventListener(
+				'mouseout',
+				highlightout,
+				false);
+				
+		switch (oName.value) {
+				case "Monday":
+					oOutput.innerHTML = "Garfield says: I hate Mondays!";
+				break;// shortened, cf. Listing 13
+				};
+	}
+	function highlight() {
+		var oOutput = document.getElementById("output");
+		oOutput.style.color="red";
+		oOutput.style.backgroundColor="yellow";
+		}
+	function highlightout() {
+		var oOutput = document.getElementById("output");
+		oOutput.style.color="blue";
+		oOutput.style.backgroundColor="green";
+		}
+	
+	function init() {
+		var oOutput = document.getElementById("output");
+		oOutput.style.color="black";
+		oOutput.style.backgroundColor="white";
+		}
+	/*
+	»onabort (when terminated)
+	
+	»onblur (when exiting)
+	
+	»onchange (when changed)
+	
+	»onclick (when clicking)
+	
+	»ondblclick (when double-clicking)
+	
+	»onerror (in the event of an error)
+	
+	»onfocus (when activating)
+	
+	»onkeydown (when a key is pressed)
+	
+	»onkeypress (when a key is pressed and held down)
+	
+	»onkeyup (when a key is released)
+	
+	»onload (when loading a file)
+	
+	»onmousedown (when a mouse button is pressed)
+	
+	»onmousemove (when moving a mouse further)
+	
+	»onmouseout (when exiting the element with the mouse)
+	
+	»onmouseout (when moving over the element with the mouse)
+	
+	»onmouseup (when the mouse button is released)
+	
+	»onreset (when resetting the form)
+	
+	»onselect (when selecting text)
+	
+	»onsubmit (when submitting the form)
+	
+	»onunload (when exiting the file)
+	
+	*/
+	</script>
+	</head>
+	<body>
+		<form>Tag: <input type="day" name="day" id="day">
+		<button type="button" onclick="display()">Submit</button>
+		</form>
+		<p>	What is there on this day to say?
+			<div id="output"></div>
+		</p>
+	</body>
+</html>

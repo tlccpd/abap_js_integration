@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		
+		<script>
+		
+		function get()
+		{
+			var oSport 	= document.getElementById("sport");
+			var sOutput = " ";
+			var oContent = document.getElementById("content");
+			var isDone = false;
+			var iCount = 1;
+			
+			while(!isDone)
+				{
+					sOutput = sOutput +iCount + "<br>";
+					switch (oSport.value)
+					{
+						case "BaseBall" :
+								if(iCount == 9){
+									isDone = true;
+								}
+								break;
+						case "Icehockey":
+								if(iCount == 6){
+									isDone = true;
+								}
+								break;
+					};
+					iCount++;
+				};
+			oContent.innerHTML = sOutput;
+			oContent.innerHTML += "Players. And the coach?";
+		};
+	
+		</script>
+
+	</head>
+	<body>
+		<form>
+			<label for = "sport">Team size</label>
+			<select name = "sport" id = "sport" size="1">
+				<option value = "BaseBall">Baseball</option>
+				<option value = "Icehockey">Hockey</option>
+			</select>
+			<button type="button" onclick="get()">Submit</button>	
+			<br>
+		</form>
+		<div id = "content">
+		<!-- Output from javascript -->
+		</div>
+	</body>
+</html>

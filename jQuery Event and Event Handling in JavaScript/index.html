@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Animation</title>
+	<style>
+		.gray {
+			background-color: gray;
+		  }
+		.l_gray{
+			background-color: lightgray;
+		}
+		.border{
+			width: 90px;
+			height: 90px;
+			border: 5px solid black;
+		}
+		.noborder{
+			width: 90px;
+			height: 100px;
+			border: none;
+		}
+	</style>
+	<script type="text/javascript"
+			src="jquery.js">
+	</script>
+	<script type="text/javascript">
+	/* This ready function is executed when the page was loaded by web browser,
+		so that function isnt being working earlier page document.
+		It is ensures by jquery because of jquery api.
+		
+		jquery factory function == $()
+		
+		An overview of the most important functions are provided ahead.
+		
+		».bind: Bind handler to event
+		».on: Bind handler to event
+		».blur: Event when an element loses its focus
+		».click: Click with the mouse button
+		».dbclick: Double-click with the mouse button
+		».hover: Mouse pointer moves over an element
+		».mousemove: Mouse pointer moves in an element
+		».keypress: A keyboard key is pressed
+		».keyup: A keyboard key is released
+		».change: A form field is changed
+		
+	*/
+	$(document).ready(function() {
+		
+		$('#box1').mouseover(function(){
+			
+			$(this).removeClass("gray");
+			$(this).addClass("l_gray");
+		});
+		
+		$("#box1").mouseout(function(){
+			$(this).removeClass("l_gray");
+			$(this).addClass("gray");
+		});
+	});
+	</script>
+	</head>
+	<body>
+		<div id = "box1" class ="gray border"></div>
+	</body>
+</html>

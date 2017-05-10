@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>jQuery AJAX</title>
+		<script src="jquery.js">
+		</script>
+		<script>
+		
+		$(document).ready(function(){
+			
+			$('#get').click(function(){
+				
+			$.getJSON("day.json", function(data){
+				
+				$.each(data , function(i , val ){
+					
+					$('<li>' + val + '<li>').appendTo('#output');
+				});
+			});
+		});
+	});	
+		</script>
+	</head>
+	<body>
+		
+		<h3>jQuery AJAX</h3>
+		<button type ="button" id = "get">JSON</button>				
+		<p>Weekdays
+			<ul id="output"></ul>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>jQuery Portfolio</title>
+		<link  rel="stylesheet" type = "text/css" href="css/style.css">
+		<script type="text/javascript" src = "js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src = "js/script.js"></script>
+		<script type="text/javascript" src = "js/filter.js" ></script>
+		<script type="text/javascript" src = "js/jquery-ui.js" ></script>
+		<script type="text/javascript" src = "js/jquery-ui.min.js"></script>
+	</head>
+	<body> 
+		<div id = "header">	
+			<div id = "menu">
+				<h2>jQuery Portfolio</h2>
+			</div>
+		</div>
+		<div id = "overlay"></div>
+		<div id = "frame">
+			<table id = "frame-table">
+				<tr>
+				<td id = "left">
+			    	<img src="images/left.png" alt = "left" 
+			    	width="60px" height="60px" />	
+				</td>
+				<td id = "right">
+				  	<img src="images/right.png" alt = "right"
+				  	width="60px" height="60px"/>	
+				</td>
+			</tr>
+			</table>		
+			<img id="main"  src="" alt = "" />
+			<div id = "description">
+				<p></p>
+			</div>
+		</div>
+		<div id = "wrapper">
+			<ul id = "filter">
+				<li class = "active" >all</li>
+				<li>nature</li>
+				<li>city</li>		
+				<li>architecture</li>
+			</ul>
+			<ul id = "portfolio">
+				<li class = "all nature"><img 		id="1" 	 src = "images/1.jpg" alt = "img"></li>
+				<li class = "all city" ><img 		id="2" 	 src = "images/2.jpg" alt = "img"></li>
+				<li class = "all nature"><img  		id="3" 	 src = "images/3.jpg" alt = "img"></li>
+				<li class = "all architecture"><img id="4"   src = "images/4.jpg" alt = "img"></li>
+				<li class = "all city"><img  		id="5" 	 src = "images/5.jpg" alt = "img"></li>
+				<li class = "all architecture"><img id="6"   src = "images/6.jpg" alt = "img"></li>
+			</ul>
+		</div>		
+	</body>
+</html>

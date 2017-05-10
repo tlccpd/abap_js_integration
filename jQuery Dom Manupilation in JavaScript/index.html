@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>jQuery -- DOM Manipulation</title>
+	<style type="text/css">
+		.bgr {
+			background-color: gray; 
+		}
+	</style>
+	<script type="text/javascript"
+				 src="jquery.js">
+	</script>
+	
+	<script type = "text/javascript">
+		$(document).ready(function(){
+			$('#button').click(function(){
+			
+				switch ($('#day').val()) {
+				case "Monday":
+					$('#output').text("Garfield says: I hate Mondays!");
+					break;
+				case "Tuesday":
+					$('#output').text("At least it's not Monday");
+					break;
+				case "Wednesday":
+					$('#output').text("Better known as hump day");
+					break;
+				case "Thursday":
+					$('#output').text("Almost Friday");
+					break;
+				case "Friday":
+					$('#output').text("Finaly, it is friday");
+					break;
+				default:
+					$("#output").text("Weekend...!").css(
+							{  color: "red",
+							   backgroundColor:"yellow"
+							});
+				};	
+			});
+		});
+		
+		/*
+		».after(): Appends the content after the element
+		».append(): Appends the content at the end of the element
+		».appendTo(): Appends the content at the end of the element
+		».insertAfter(): Inserts the content in the element
+		».insertBefore(): Inserts the content before the element
+		».prepend(): Prepends the content to the beginning of the element
+		».prependTo(): Prepends the content to the beginning of the element
+		».remove(): Removes the element
+		».wrap: Wraps the elements with the defined HTML structure
+		».addClass: Adds the elements to the specified class
+		».removeClass: Removes the transferred CSS class
+		».css: Sets the CSS property
+		*/
+				
+		</script>
+	</head>
+	<body>
+		<form>
+			Day: <input type="day" name="day" id="day">
+			<button type="button" id="button">Submit</button>
+		</form>
+		<p>What is there on this day to say?
+		<div id="output"></div></p>
+	</body>
+</html>
